@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Summarizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Page Summarizer</h1>
+    <p class="sub">Paste a link and get an AI summary of the page.</p>
+    <form id="form">
+      <input id="url" type="url" placeholder="https://example.com/article" required autofocus>
+      <button id="btn" type="submit">Summarize</button>
+    </form>
+    <div id="loading" class="loading" hidden><span class="spinner"></span> Loading...</div>
+    <div id="error" class="error" role="alert" hidden></div>
+    <section id="result" class="result" hidden>
+      <h2 id="title"></h2>
+      <div id="summary"></div>
+      <p id="note" class="note" hidden>Only the first part of a long page was summarized.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
